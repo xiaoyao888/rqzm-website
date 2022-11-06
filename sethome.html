@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>人气桌面</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0 auto;
+            font-family: Tahoma, Verdana, Arial, sans-serif;
+        }
+    </style>
+    <!--引入 element-ui 的样式，-->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 必须先引入vue，  后使用element-ui -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <!-- 引入element 的组件库-->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+<div id="box" class="set-home-scrollbar global-scrollbar">
+    <div id="set-home" class="set-home">
+        <h2 class="title">如何将 人气桌面 设置为您的主页</h2>
+        <div id="browser-list" class="browser-list">
+            <el-collapse v-model="activeName" accordion>
+                <el-collapse-item name="1">
+                    <template slot="title">
+                        <div class="head-browser">
+                            <img width="32" height="32" src="./images/sethome/chrome.png">
+                            <span class="browser-name">Chrome 浏览器</span>
+                        </div>
+                        <span class="arrow"></span>
+                    </template>
+                    <div class="anim-wrap" >
+                        <div class="item-content">
+                            <p>在地址栏输入 chrome://settings/appearance，回车进入设置页面；</p>
+                            <p>往下滑动到底部，在【启动时】一栏里选择【打开特定网页或一组网页】，再选中【添加新网页】；</p>
+                            <div class="chrome-1 img-1">
+                                <img src="./images/sethome/c1.jpg">
+                            </div>
+                            <p>在弹窗里输入 人气桌面 主页的网址 https://rqzm.cn，点击【添加】，主页设置完成。</p>
+                            <div class="chrome-2 img-2">
+                                <img src="./images/sethome/c2.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </el-collapse-item>
+                <el-collapse-item name="2">
+                    <template slot="title">
+                        <div class="head-browser">
+                            <img width="32" height="32" src="./images/sethome/edge.png">
+
+                            <span class="browser-name">Edge 浏览器</span>
+                        </div>
+                        <span class="arrow"></span>
+                    </template>
+                    <div class="anim-wrap">
+                        <div class="item-content">
+                            <p>在浏览器地址栏输入 edge://settings/onStartup，回车进入设置页面。</p>
+                            <p>在【启动时】这一栏中选择【打开一个或多个特定页面】，再点击后侧的【添加新页面】按钮。</p>
+                            <div class="edge-1 img-1">
+                                <img src="./images/sethome/e1.jpg">
+                            </div>
+
+                            <p>在弹窗里输入人气桌面主页的网址https://rqzm.cn，点击【添加】，主页设置完成。</p>
+                            <div class="edge-2 img-2">
+                                <img src="./images/sethome/e2.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </el-collapse-item>
+
+                <el-collapse-item name="3">
+                    <template slot="title">
+                        <div class="head-browser">
+                            <img width="32" height="32" src="./images/sethome/firefox.png">
+
+                            <span class="browser-name">Firefox 浏览器</span>
+                        </div>
+                        <span class="arrow"></span>
+                    </template>
+                    <div class="anim-wrap" style="transition: height 400ms ease-in 0s;">
+                        <div class="item-content">
+
+                            <p>在地址栏输入 about:preferences#home，回车进入设置页面。</p>
+                            <p>点击【主页和新窗口】后面的下拉栏，在下拉菜单中选中【自定义网址】。</p>
+                            <div class="firefox-1 img-1">
+                                <img src="./images/sethome/f1.jpg">
+                            </div>
+
+                            <p>在文本框中输入 人气桌面 主页的网址 https://rqzm.cn，主页设置完成。</p>
+                            <div class="firefox-2 img-2">
+                                <img src="./images/sethome/f2.jpg">
+                            </div>
+
+                        </div>
+                    </div>
+                </el-collapse-item>
+
+                <el-collapse-item name="4">
+                    <template slot="title">
+                        <div class="head-browser">
+                            <img width="32" height="32" src="./images/sethome/safari.png">
+
+                            <span class="browser-name">Safari 浏览器</span>
+                        </div>
+                        <span class="arrow"></span>
+                    </template>
+                    <div class="anim-wrap" >
+                        <div class="item-content">
+
+                            <p>单击浏览器左上角【Safari浏览器】，选择【偏好设置】。</p>
+                            <div class="safari-1 img-1">
+                                <img src="./images/sethome/s1.jpg">
+                            </div>
+
+                            <p>在弹出的【通用】窗口下，找到【主页】选项，并输入人气桌面主页的网址https://rqzm.cn。</p>
+                            <p>点击【设定为当前页面】，主页设置完成。</p>
+                            <div class="safari-2 img-2">
+                                <img src="./images/sethome/s2.jpg">
+                            </div>
+
+                        </div>
+                    </div>
+                </el-collapse-item>
+
+                <el-collapse-item name="5">
+                    <template slot="title">
+                        <div class="head-browser">
+                            <img width="32" height="32" src="./images/sethome/360safe.png">
+
+                            <span class="browser-name">360安全浏览器</span>
+                        </div>
+                        <span class="arrow"></span>
+                    </template>
+                    <div class="anim-wrap" >
+                        <div class="item-content">
+
+                            <p>在地址栏输入se://settings/browser，回车进入设置页面。</p>
+                            <p>往下滑动页面，找到【启动时打开】这一栏，点击【修改主页】按钮。</p>
+                            <div class="360safe-1 img-1">
+                                <img src="./images/sethome/31.jpg">
+                            </div>
+
+                            <p>在弹窗中输入人气桌面主页的网址https://rqzm.cn，点击【确定】，主页设置完成。</p>
+                            <div class="360safe-2 img-2">
+                                <img src="./images/sethome/32.jpg">
+                            </div>
+
+                        </div>
+                    </div>
+                </el-collapse-item>
+
+                <el-collapse-item name="6">
+                    <template slot="title">
+                        <div class="head-browser">
+                            <img width="32" height="32" src="./images/sethome/360p.png">
+
+                            <span class="browser-name">360极速浏览器</span>
+                        </div>
+                        <span class="arrow"></span>
+                    </template>
+                    <div class="anim-wrap" >
+                        <div class="item-content">
+
+                            <p>在地址栏输入chrome://settings/browser，回车进入设置页面。</p>
+                            <p>在【启动时】这一栏，选择【打开主页】，然后在后方输入人气桌面主页的网址https://rqzm.cn，主页设置完成。</p>
+                            <div class="360p-1 img-1">
+                                <img src="./images/sethome/3j1.jpg">
+                            </div>
+
+                        </div>
+                    </div>
+                </el-collapse-item>
+
+                <el-collapse-item name="7">
+                    <template slot="title">
+                        <div class="head-browser">
+                            <img width="32" height="32" src="./images/sethome/sogou.png">
+
+                            <span class="browser-name">搜狗浏览器</span>
+                        </div>
+                        <span class="arrow"></span>
+                    </template>
+                    <div class="anim-wrap" >
+                        <div class="item-content">
+
+                            <p>在地址栏输入se://settings/?category=general，回车进入设置页面。</p>
+                            <p>在【主页】这一栏中，选择【自定义】，再点击其后方的【设置网址】按钮。</p>
+                            <div class="sogou-1 img-1">
+                                <img src="./images/sethome/sg1.jpg">
+                            </div>
+
+                            <p>在弹窗中输入人气桌面主页的网址https://rqzm.cn，点击【确定】，主页设置完成。</p>
+                            <div class="sogou-2 img-2">
+                                <img src="./images/sethome/sg2.jpg">
+                            </div>
+
+                        </div>
+                    </div>
+                </el-collapse-item>
+
+                <el-collapse-item name="8">
+                    <template slot="title">
+                        <div class="head-browser">
+                            <img width="32" height="32" src="./images/sethome/qq.png">
+
+                            <span class="browser-name">QQ浏览器</span>
+                        </div>
+                        <span class="arrow"></span>
+                    </template>
+                    <div class="anim-wrap" >
+                        <div class="item-content">
+
+                            <p>在地址栏输入qqbrowser://settings/，回车进入设置页面。</p>
+                            <p>在【启动时打开】这一栏，选择【主页】，点击后侧的【设置】按钮。</p>
+                            <div class="qq-1 img-1">
+                                <img src="./images/sethome/q1.jpg">
+                            </div>
+
+                            <p>然后选中弹框中的【自定义网站】，输入人气桌面主页的网址https://rqzm.cn，点击【确定】，主页设置完成。</p>
+                            <div class="qq-2 img-2">
+                                <img src="./images/sethome/q2.jpg">
+                            </div>
+
+                        </div>
+                    </div>
+                </el-collapse-item>
+            </el-collapse>
+        </div>
+    </div>
+</div>
+<script>
+    new Vue({
+        //    此处指向vue组件所要渲染的DOM标签 <div id="box"></div>   el:'#box'  用id属性标识 也可用class属性
+        // 如果是class <div class="box"></div>   el:'.box'
+        // 总之最外层div用class或id绑定js ，下面el对应body对外层div选择器名称，绑定之后才可以使用elementui中组件内容
+        el: '#box',
+        data() {
+            return {
+            }
+        },
+        methods: {
+        }
+    })
+</script>
+<style>
+    @media (min-width:768px) {
+        .set-home{
+            width:70%;
+            margin: 0 auto;
+        }
+    }
+    body{
+        background: #e8e8e8;
+    }
+    .title{
+        text-align:center;
+    }
+    .browser-list{
+        padding:50px;
+        background: #ffffff;
+        border-radius: 20px;
+    }
+    .head-browser{
+        vertical-align: middle;
+        display: inline-flex;
+
+    }
+    .head-browser img{
+        margin-top:10px;
+        margin-right:10px;
+    }
+    .browser-name{
+        line-height: 53px;
+    }
+</style>
+</body>
+</html>

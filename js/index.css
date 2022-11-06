@@ -1,0 +1,69 @@
+#app {
+    background-image: linear-gradient(-45deg, rgba(124, 57, 57, 0), rgb(199, 198, 198));
+}
+
+header {
+    position: relative;
+    text-align: center;
+    background-color: #27ae60;
+    color: #fff;
+    margin-bottom: 0;
+    height: 280px;
+}
+
+.navbar-brand, .nav-link, .navbar-nav .nav-link.active, .navbar-nav .show > .nav-link {
+    color: #ffffff;
+}
+
+.bg-light {
+    background: none !important;
+
+}
+
+.rqzm {
+    font-size: 26px;
+    text-shadow: -5px 5px 0 rgb(0 0 0 / 10%);
+}
+
+section {
+    min-height: 300px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center
+}
+
+footer {
+    background-color: #27ae60;
+    color: #fff;
+    height: 220px;
+    position: relative;
+}
+
+.link {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.link a {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 5px 8px;
+    text-decoration: inherit;
+}
+
+.copy-right {
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    /*margin-top: 10px;*/
+    text-align: center;
+    background-color: rgba(51, 51, 51, .08);
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.copy-right a {
+    color: #ffffff;
+    text-decoration: dashed;
+}
